@@ -8,30 +8,32 @@
     body {
       font-family: Arial, sans-serif;
       background: #f4f6f8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      padding: 0;
+    }
+
+    .contenedor {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
     }
 
     .card {
       background: white;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
       text-align: center;
-      width: 320px;
+      margin-bottom: 25px;
     }
 
     h1 {
-      color: #2c3e50;
+      color: #1f2d3d;
       margin-bottom: 10px;
     }
 
     p {
       color: #555;
-      margin-bottom: 20px;
     }
 
     button {
@@ -42,23 +44,66 @@
       border-radius: 8px;
       cursor: pointer;
       font-size: 16px;
+      margin-top: 10px;
     }
 
     button:hover {
       background: #1b5fa7;
     }
+
+    .extra {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    ul {
+      text-align: left;
+      color: #444;
+    }
+
+    footer {
+      margin-top: 20px;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Hola GitHub</h1>
-    <p>Este archivo fue creado en una nueva rama para hacer una prueba.</p>
-    <button onclick="mostrarMensaje()">Haz clic</button>
+  <div class="contenedor">
+    <div class="card">
+      <h1>Hola GitHub</h1>
+      <p>Este archivo fue creado en una rama de prueba.</p>
+      <button onclick="mostrarMensaje()">Haz clic</button>
+    </div>
+
+    <div class="extra">
+      <h2>Nuevos cambios en la rama</h2>
+      <p>Esta sección fue agregada para probar cómo GitHub muestra diferencias antes de fusionar con main.</p>
+
+      <ul>
+        <li>Se añadió una segunda sección.</li>
+        <li>Se agregó una lista con cambios.</li>
+        <li>Se mejoró el estilo visual.</li>
+      </ul>
+
+      <button onclick="cambiarColor()">Cambiar fondo</button>
+    </div>
+
+    <footer>
+      Proyecto de prueba para ramas, revisión y merge.
+    </footer>
   </div>
 
   <script>
     function mostrarMensaje() {
       alert("La prueba en la rama funciona correctamente.");
+    }
+
+    function cambiarColor() {
+      document.body.style.background = "#dfefff";
     }
   </script>
 </body>
